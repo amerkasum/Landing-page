@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    border: 0px solid none;
+}
+
+iframe {
+    border: none;
+}
+
+@keyframes left-to-right {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.home-background-image {
+    background-image: url("../images/canon.jpg");
+    background-size: 700px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    animation: left-to-right 2s forwards;
+}
+
+.text-container {
+    width: 50%;
+    background-color: black;
+    height: 700px;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.home-title, .home-subtitle {
+    font-family:'Courier New', Courier, monospace;
+    animation: fade-in 3s forwards;
+}
+
+.home-body {
+    background-color: black;
+}
+
+.bg-dark-2 {
+    background-color: black;
+}
+
+.logo {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
