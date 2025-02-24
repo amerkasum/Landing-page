@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 iframe {
@@ -12,7 +12,7 @@ html, body {
     height: 100vh;
 }
 
-@keyframes left-to-right {
+@keyframes from-right-to-left {
     from {
         transform: translateX(100%);
     }
@@ -21,8 +21,56 @@ html, body {
     }
 }
 
+@keyframes from-left-to-right {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes from-bottom-to-middle {
+    from {
+        transform: translateY(20%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes from-middle-to-top {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(-20%);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0
+    }
+}
+
+.section {
+    height: 600px;
+}
+
 .intro-container {
-    height: 100vh;
     background-color: black;
 }
 
@@ -44,17 +92,10 @@ html, body {
     width: 100%;
     height: 100%;
     background-color: black;
-    animation: left-to-right 2s forwards;
+    animation: from-right-to-left 2s forwards;
 }
 
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1
-    }
-}
+
 
 .home-title, .home-subtitle {
     font-family:'Courier New', Courier, monospace;
@@ -70,4 +111,90 @@ html, body {
 .logo {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+.m-50 {
+    margin: 50px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.my-50 {
+    margin: 50px 0 50px 0;
+}
+
+.mx-50 {
+    margin: 0 50px 0 50px;
+}
+
+.border-radius-20 {
+    border-radius: 20px !important;
+}
+
+.icon-large {
+    font-size: 3rem;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.instagram-shadow {
+    box-shadow: 0 .5rem 1rem rgba(255,0, 0, .15);
+}
+
+.youtube-shadow {
+    box-shadow: 0 .5rem 1rem rgba(255,0, 0, .15);
+}
+
+.reddit-shadow {
+    box-shadow: 0 .5rem 1rem rgba(255,0, 0, .15);
+}
+
+.threads-shadow {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.github-shadow {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.twitter-shadow {
+    box-shadow: 0 .5rem 1rem rgba(0, 225, 255, 0.15);
+}
+
+.linkedin-shadow {
+    box-shadow: 0 .5rem 1rem rgba(0, 225, 255, 0.15);
+}
+
+.facebook-shadow {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 255, 0.15);
+}
+
+.whatsapp-shadow {
+    box-shadow: 0 .5rem 1rem rgba(0, 255, 0, 0.15);
+}
+
+.social-media-decoration {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+.instagram-text, .linkedin-text, .youtube-text, .threads-text, .facebook-text, .reddit-text,
+.twitter-text, .whatsapp-text, .github-text  
+{
+    animation: from-bottom-to-middle 1s forwards; 
+}
+
+.social-media-icons {
+    animation: fade-in 2s forwards;
+}
+
+
 
